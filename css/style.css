@@ -95,7 +95,22 @@ footer >p{
   border: 10px 	#9ACD32 solid;
   margin: 10px;
   overflow: hidden;
+  animation-name: headshot_focus;
+	animation-duration: 10s;
 }
+
+/*animation*/
+
+@-webkit-keyframes headshot_focus{
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
+@keyframes headshot_focus{
+	from {opacity: 0}
+	to {opacity: 1}
+}
+
 
 .container{
   display: grid;
@@ -814,7 +829,11 @@ h6{
 /*Add media query to handle reduced-motion*/
 
 @media screen and (prefers-reduced-motion: reduce){
-  #logo{
-    animation:none;
+  .me > img{
+		animation: none;
   }
+  .flip-card-inner {
+    transition: transform none;
+}
+	
 }
