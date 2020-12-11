@@ -366,6 +366,8 @@ legend{
 }
 
 label{
+  background-color: white;
+  border: 2px solid #9ACD32;
   padding: 5px;
   display: inline-block;
   margin-right:10px;
@@ -375,7 +377,7 @@ input {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #9ACD32;
+  border: 2px solid #9ACD32;
   box-sizing: border-box;
 }
 span{
@@ -390,7 +392,7 @@ textarea{
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #9ACD32;
+  border: 2px solid #9ACD32;
   box-sizing: border-box;
 }
 
