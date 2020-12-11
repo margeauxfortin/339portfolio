@@ -1,0 +1,818 @@
+
+
+body{
+	font-family: "Sans Serif";
+	line-height: normal;
+  margin: 10px;
+  background-color: #FFF8DC;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: myFirstFont;
+  src: url("champagne_limousines/Champagne & Limousines.ttf");
+  font-weight: bold;
+}
+
+/***************mobile view**************/
+/*nav header*/
+
+h1{
+  font-size: 2em;
+  text-align: center;
+  line-height: 2;
+  background-color: #006400;
+  color: #FFFFFF;
+  font-family: myFirstFont;
+}
+
+.logo{
+  width: 75px;
+  height: 75px;
+  align-items: center;
+}
+
+h2{
+  font-size: 2em;
+  text-align: center;
+  padding: 5px;
+  font-family: 'Arial Black', sans-serif; 
+}
+h3{
+  font-size: 1.3em;
+  text-align: center;
+  padding: 15px;
+  font-family: 'Arial Black', sans-serif; 
+}
+p {
+  padding: 15px;
+  text-align: left;
+  font-family: 'Georgia', serif;
+  font-size: 16px;
+}
+.current{
+text-transform: uppercase;
+}
+.skip-link{
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+.skip-link:focus{
+  top:20px;
+  color: black;
+  text-decoration-style: solid;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+footer{
+  background-color: #006400;
+  color: white;
+  padding: 10px;
+}
+footer >p{
+  text-align: center;
+  font-size: 14pt
+}
+
+.me{
+  text-align: center; 
+}
+
+.me > img{
+  max-width: 350px;
+  border: 10px 	#9ACD32 solid;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.container{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.image1{
+  grid-column: 1/span 1;
+  width: 125px;
+  height: 150px;
+}
+
+.image2{
+  grid-column: 2/span 1;
+  width: 125px;
+  height: 150px;
+}
+
+.image3{
+  grid-column: 3/span 1;
+  width: 125px;
+  height: 150px;
+}
+
+.image4{
+  grid-column: 4/span 1;
+  width: 125px;
+  height: 150px;
+  display: none;
+}
+  
+.image5{
+  grid-column: 5/span 1;
+  width: 125px;
+  height: 150px;
+  display: none;
+}
+.image6{
+  grid-column: 6/span 1;
+  width: 125px;
+  height: 150px;
+  display: none;
+}
+
+
+.r-container2{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-row-gap: 5px;
+  justify-items: center;
+  overflow: hidden;
+}
+
+.image1-2{
+  grid-column: 1/span 1;
+  grid-row: 1/span 1;
+  width: 150px;
+  height: 150px;
+  border: 7px 	#9ACD32 solid;
+}
+  
+.image2-2{
+  grid-column: 2/span 1;
+  grid-row: 1/span 1;
+  width: 150px;
+  height: 150px;
+  border: 7px 	#9ACD32 solid;
+}
+  
+.image3-2{
+  grid-column: 1/span 1;
+  grid-row: 2/span 1;
+  width: 150px;
+  height: 150px;
+  border: 7px 	#9ACD32 solid;
+}
+
+.image4-2{
+  grid-column: 2/span 1;
+  grid-row: 2/span 1;
+  width: 150px;
+  height: 150px;
+  border: 7px 	#9ACD32 solid;
+}
+
+/* Gallery! */
+
+.gallery{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+}
+
+/*flip card*/
+figure{
+	display: table;
+	table-layout: fixed;
+}
+	
+figure img{
+	margin: 10px;
+  width: 350px;
+  height: 350px;
+  border: 8px 	#FFF8DC solid;
+}
+	
+figure figcaption{
+  	display: table-caption;
+	  caption-side: bottom;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.gallery > img{
+	height: 100px;
+	width: 100px;
+}
+
+.flip-card ul{
+	list-style: none;
+	padding: 20px;
+}
+
+.flip-card {
+  	background-color: transparent;
+  	width: 250px;
+  	height: 250px;
+  	perspective: 1000px;
+	  margin-right: auto;
+	  margin-left: auto;
+	  padding: 20px;
+}
+
+.flip-card-inner {
+  	position: relative;
+  	width: 100%;
+  	height: 100%;
+  	text-align: center;
+  	transition: transform 0.8s;
+  	transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner,
+.flip-card:focus-within .flip-card-inner,
+.flip-card:active .flip-card-inner,
+.flip-card:focus .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  	position: absolute;
+  	width: 100%;
+  	height: 100%;
+  	-webkit-backface-visibility: hidden; 
+  	backface-visibility: hidden;
+}
+
+
+
+/******* Navbar ********/
+header{
+  border-bottom: 3px solid 	#006400;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.nav_links{
+  font-family: 'Arial Black', sans-serif; 
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.nav_item a{
+  color: black;
+  text-decoration: none;
+}
+
+.nav_item a:hover, a:focus{
+  color: #FFD700;
+  text-decoration: underline;
+  -webkit-text-decoration-style: dotted;
+          text-decoration-style: dotted;
+}
+/*recipe*/
+
+.r-container{
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-template-columns: auto;
+  overflow: hidden;
+}
+
+.r-container > img{
+  width:100%;
+  height: 400px;
+  margin: 10px;
+  overflow: hidden;
+  grid-row: 1/span 1;
+  grid-column: 1/span 1;
+}
+
+.r-container > .recipe{
+  font-size: 20pt;
+  padding: 5px;
+  grid-row: 2/span 1;
+  grid-column: 1/span 1;
+}
+.recipe > h4{
+  font-family: 'Arial Black', sans-serif; 
+  font-size: 25pt; 
+}
+.recipe > p{
+  font-family: 'Arial Black', sans-serif; 
+  font-size: 20pt;
+}
+.recipe > ul{
+  font-family: 'Georgia', serif;
+  font-size: 17px;
+  padding: 0px 50px;
+}
+
+.r-container > .instructions{
+  font-size: 25pt; 
+  padding: 20px 5px;
+  grid-row: 3/span 1;
+  grid-column: 1/span 1;
+}
+
+.instructions> ol{
+  padding: 25px;
+  font-size: 17px;
+  font-family: 'Georgia', serif;
+}
+.instructions> p{
+  padding: 10px;
+  font-size: 17px;
+  font-family: 'Georgia', serif;
+}
+
+body {
+  font-family: 'Arial Black', sans-serif; 
+}
+
+/*form*/
+
+form {
+  border: 6px solid #006400;
+}
+
+legend{ 
+  font-size: 125%;
+  font-style:italic;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+label{
+  padding: 5px;
+  display: inline-block;
+  margin-right:10px;
+}
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #9ACD32;
+  box-sizing: border-box;
+}
+span{
+  margin-left:20%;
+  font-family: italic;
+  font-weight: bold;
+}
+
+textarea{
+  width: 100%;
+  height: 35vh;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #9ACD32;
+  box-sizing: border-box;
+}
+
+
+input[type=submit] {
+  background-color: #006400;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+}
+.gallery{
+  background-image: url("../images/pattern-background.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+.contact{
+  background-image: url("../images/striped-gingham.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (min-width: 770px) {
+  form{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  input{
+    width:80%;
+  }
+
+  textarea{
+    width:80%;
+    height: 25vh;
+ }
+ 
+ div + label{
+    line-height: 25vh;
+    vertical-align:top;
+ }
+}
+/*tablet view*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  .nav_links{
+    font-family: 'Arial Black', sans-serif; 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 20px;
+  }
+  h1{
+    font-size: 40px;
+  }
+  h2{
+    font-size: 35px;
+  }
+  h3{
+    font-size: 30px;
+  }
+  p{
+    font-size: 20px;
+  }
+  .container{
+    display: grid;
+    grid-template-rows: 1;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .image1{
+    grid-column: 1/span 1;
+    width: 140px;
+    height: 175px;
+  }
+  
+  .image2{
+    grid-column: 3/span 1;
+    width: 140px;
+    height: 175px;
+  }
+  
+  .image3{
+    grid-column: 2/span 1;
+    width: 140px;
+    height: 175px;
+  }
+  .image4{
+    grid-column: 4/span 1;
+    width: 140px;
+    height: 175px;
+    display: block;
+  }
+    
+  .image5{
+    grid-column: 5/span 1;
+    width: 140px;
+    height: 175px;
+    display: block;
+  }
+  .image6{
+    grid-column: 6/span 1;
+    width: 140px;
+    height: 175px;
+    display: block;
+  }
+  .gallery{
+    background-image: url("../images/pattern-background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  .contact{
+    background-image: url("../images/striped-gingham.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+}
+
+/*desktop view*/
+@media screen and (min-width: 1024px){
+  .nav_links{
+    font-family: 'Arial Black', sans-serif; 
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 25px;
+  }
+  h1{
+    font-size: 60px;
+  }
+  h2{
+    font-size: 40px;
+  }
+  h3{
+    font-size: 35px;
+  }
+  p{
+    font-size: 25px;
+  }
+  .container{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .image1{
+    grid-column: 1/span 1;
+    grid-row: 1/ span 1;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .image2{
+    grid-column: 2/span 1;
+    grid-row: 1/ span 1;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .image3{
+    grid-column: 3/span 1;
+    grid-row: 1/ span 1;
+    width: 200px;
+    height: 200px;
+  }
+  .image4{
+    grid-column: 1/span 1;
+    grid-row: 2/ span 1;
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
+    
+  .image5{
+    grid-column: 2/span 1;
+    grid-row: 2/ span 1;
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
+  .image6{
+    grid-column: 3/span 1;
+    grid-row: 2/ span 1;
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
+
+  /* Cards! */
+  .card {
+    /*Your  code here again.*/
+    flex-basis: 225px;
+  }
+
+  .card_big{
+    -webkit-transform: scaleX(1.12);
+            transform: scaleX(1.12);
+  }
+
+  /* Navbar */
+  header{
+    /*Your code here again.*/  
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .nav_links{
+    /*Your code here again.*/  
+    flex-direction: row;
+  }
+
+  .nav_item a{
+    padding: 10px;
+  }
+  .about_me{
+		display: grid;
+		grid-template-columns: 325px 325px 325px;
+		grid-template-rows: 325px 325px 325px;
+		grid-gap: 10px;
+	}
+	
+	figcaption{
+		overflow: auto;
+	}
+	
+	.gallery figure img{
+		border: none;
+		margin: 0px;
+		padding: 0px;
+		height: 315px;
+		width: 315px;
+		position: absolute;
+  }
+  .gallery{
+    background-image: url("../images/pattern-background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  }
+  
+	.gallery figure figcaption{
+      background: rgba(48, 143, 48, 0.85);
+		  height: 295px;
+		  width: 295px;
+		  text-align: center;
+		  margin: auto;
+  		color: #fff;
+  		visibility: hidden;
+  		opacity: 0;
+		  position: relative;
+		  transition: opacity .2s, visibility .2s;
+  }
+  
+	.gallery figure:hover figcaption{
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  /*recipe page*/
+
+.r-container{
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.r-container > img{
+  width:100%;
+  height: 650px;
+  margin: 10px;
+  border: 10px #F0E68C solid;
+  overflow: hidden;
+  grid-row: 1/span 1;
+  grid-column: 2/span 1;
+}
+
+.r-container > .recipe{
+  font-size: 25pt;
+  padding: 5px;
+  grid-row: 1/span 1;
+  grid-column: 1/span 1;
+}
+.recipe > h4{
+  font-family: 'Arial Black', sans-serif; 
+  font-size: 30pt; 
+}
+.recipe > p{
+  font-family: 'Arial Black', sans-serif; 
+  font-size: 25pt;
+}
+.recipe > ul{
+  font-family: 'Georgia', serif;
+  font-size: 20px;
+  padding: 0px 50px;
+}
+
+.r-container > .instructions{
+  font-size: 30pt; 
+  padding: 20px 5px;
+  grid-row: 2/span 1;
+  grid-column: 1/span 2;
+}
+
+.instructions> ol{
+  padding: 25px;
+  font-size: 20px;
+  font-family: 'Georgia', serif;
+}
+.instructions> p{
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Georgia', serif;
+}
+h6{
+  font-size: 30px
+}
+.r-container2{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  overflow: hidden;
+  grid-template-rows: 1fr;
+  grid-row-gap: 2px;
+  padding: 5px;
+}
+
+.image1-2{
+  grid-column: 1/span 1;
+  grid-row: 1/span1;
+  width: 250px;
+  height: 300px;
+  border: 7px 	#9ACD32 solid;
+}
+  
+.image2-2{
+  grid-column: 2/span 1;
+  grid-row: 1/span1;
+  width: 250px;
+  height: 300px;
+  border: 7px 	#9ACD32 solid;
+}
+  
+.image3-2{
+  grid-column: 3/span 1;
+  grid-row: 1/span1;
+  width: 250px;
+  height: 300px;
+  border: 7px 	#9ACD32 solid;
+}
+
+.image4-2{
+  grid-column: 4/span 1;
+  grid-row: 1/span1;
+  width: 250px;
+  height: 300px;
+  border: 7px 	#9ACD32 solid;
+}
+.contact{
+  background-image: url("../images/striped-gingham.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+
+}
+@media print { 
+  .card {
+    flex-basis: 200px;  
+  }
+  /*Your code here again.*/
+  /*You will want four selectors*/  
+  body{
+    background-image: none;
+  }
+  .pricing{
+    align-items: flex-start;
+  }
+  .gallery{
+    display:none;
+  }
+  #gallery{
+    display: none
+  }
+}
+
+/*Your code here again.*/ 
+/*Add media query to handle reduced-motion*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  #logo{
+    animation:none;
+  }
+}
